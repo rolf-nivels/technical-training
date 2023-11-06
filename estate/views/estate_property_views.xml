@@ -59,5 +59,26 @@
             </form>
         </field>
     </record>
+
+    <record id="estate_property__search" model="ir.ui.view">
+        <field name="name">estate.property.search</field>
+        <field name="model">estate_property</field>
+        <field name="arch" type="xml">
+            <search string="Estate property">
+                <field name="name" string="Property" />
+                <field name="postcode"/>
+                <field name="expected_price"/>
+                <field name="bedrooms"/>
+                <field name="living_area" string="Living Area (sqm)"/>
+                <field name="facades" string="Facades"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Provider" name="provider" context="{'group_by':'delivery_type', 'residual_visible':True}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
 </odoo>
 
