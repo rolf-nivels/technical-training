@@ -5,7 +5,7 @@ class EstateProperty(models.Model):
     _description = "Estate properties"
 
     name = fields.Char(string="Name of the property", required=True, default="Unknown")
-    active = fields.Boolean()
+    active = fields.Boolean(default=True)
     description = fields.Text()
     postcode = fields.Char(string="Post code (ZIP)")
     date_availability = fields.Date(string="Availabilty date", default=lambda self: fields.Date.add(fields.Date.today(), months=+3), copy=False)
