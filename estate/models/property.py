@@ -4,11 +4,11 @@ class EstateProperty(models.Model):
     _name = "estate_property"
     _description = "Estate properties"
 
-    name = fields.Char(string="Name of the property")
+    name = fields.Char(string="Name of the property", required=True)
     description = fields.Text()
     postcode = fields.Char(string="Post code (ZIP)")
     date_availability = fields.Date(string="Availabilty date")
-    expected_price = fields.Float(string="Price (expected)")
+    expected_price = fields.Float(string="Price (expected)", required=True)
     selling_price = fields.Float(string="Price (selling)")
     bedrooms = fields.Integer(string="Size of bedrooms")
     living_area  = fields.Integer(string="Size of living area")
