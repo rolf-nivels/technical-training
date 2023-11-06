@@ -22,3 +22,8 @@ class EstateProperty(models.Model):
                                            ('east', 'East'),
                                            ('west', 'West')])
     last_seen = fields.Datetime("Last Seen", default=lambda self: fields.Datetime.now())
+    state = fields.Selection([('new', 'New'), 
+                              ('oreceived', 'Offer received'),
+                              ('oaccepted', 'Offer accepted'),
+                              ('sold', 'Sold'),
+                              ('cancel', 'Canceled')], default='new')
