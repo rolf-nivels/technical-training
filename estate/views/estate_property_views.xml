@@ -73,6 +73,7 @@
                 <field name="facades" string="Facades"/>
                 <separator/>
                 <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <filter string="New or Offer received" name="neworofferrec" domain="[('state', 'in', [('new', 'oreceived')])]" />
                 <group expand="1" string="Group By">
                     <filter string="Postcode" name="postcode" context="{'group_by':'postcode'}"/>
                 </group>
