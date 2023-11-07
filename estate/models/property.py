@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class EstateProperty(models.Model):
-    _name = "estate_property"
+    _name = "estate.property"
     _description = "Estate properties"
 
     name = fields.Char(string="Name of the property", required=True, default="Unknown")
@@ -27,3 +27,6 @@ class EstateProperty(models.Model):
                               ('oaccepted', 'Offer accepted'),
                               ('sold', 'Sold'),
                               ('cancel', 'Canceled')], default='new')
+    property_type_id = fields.Many2one("estate.property.type", string="Property Type")
+    salesman_id = fields.Many2one("res.partner", string="Salesman", required=True)
+    buyer_id = fields.Many2one("res.partner", string="Buyer")

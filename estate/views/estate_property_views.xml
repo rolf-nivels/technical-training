@@ -3,13 +3,13 @@
 
     <record id="estate_property_model_action" model="ir.actions.act_window">
         <field name="name">Test action</field>
-        <field name="res_model">estate_property</field>
+        <field name="res_model">estate.property</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <record id="estate_property_view_tree" model="ir.ui.view">
         <field name="name">estate.property.tree</field>
-        <field name="model">estate_property</field>
+        <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <tree string="Properties">
                 <field name="name"/>
@@ -26,7 +26,7 @@
 
     <record id="estate_property_view_form" model="ir.ui.view">
         <field name="name">estage.property.form</field>
-        <field name="model">estate_property</field>
+        <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <form string="Property information">
                 <sheet>
@@ -62,7 +62,7 @@
 
     <record id="estate_property__search" model="ir.ui.view">
         <field name="name">estate.property.search</field>
-        <field name="model">estate_property</field>
+        <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <search string="Estate property">
                 <field name="name" string="Property" />
@@ -81,5 +81,11 @@
         </field>
     </record>
 
-</odoo>
+    <record id="estate_property_type_model_action" model="ir.actions.act_window">
+        <field name="name">Manage property types</field>
+        <field name="res_model">estate.property.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
+
+</odoo>
