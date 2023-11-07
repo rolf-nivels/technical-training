@@ -31,7 +31,7 @@
             <form string="Property information">
                 <sheet>
                     <h1><field name="name"/></h1>
-                    <field name="tag_ids"/>
+                    <field name="tag_ids" widget="many2many_tags"/>
                     <group>
                         <group>
                             <field name="property_type_id"/>
